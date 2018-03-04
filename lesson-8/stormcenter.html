@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wind and Rain Service</title>
+  <meta name="author" content="Leonardo Castrillón Gómez">
+  <meta name="description" content="Are you planning a long-distance trip? you probably want to know what the weather will be like when you get where you're going—or later that day.">
+ 
+</head>
+<body>
+
+  <header>
+
+    <img src="images/wind-and-rain.png"width="200"height="200>"
+    <h1>Wind and Rain Service</h1>
+    <div class="subheading">Are you planning a long-distance trip? you probably want to know what the weather will be like when you get where you're going—or later that day.</div>
+ 
+    
+    </header>
+
+  
+      <style>
+          
+          
+          body{
+          font-family: 'Raleway', sans-serif;
+              font size:48px
+          }
+          
+          
+        .flex-container {
+  display: flex;
+            flex-direction: row;
+  background-color: #7446D7;
+            justify-content:space-between;
+            
+}
+
+.flex-container > div {
+  background-color: #EFFD72;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+    
+       </style>
+    
+  <div class="flex-container">
+  <div><a href="#">Home</a></div>
+  <div><a href="#">Franklin</a></div>
+  <div><a href="#">Greenville</a></div>
+  <div><a href="#">Springfield</a></div>
+  <div><a href="#">Storm Center</a></div>
+  <div><a href="/gallery-7.html">Gallery</a></div>
+</div>
+       
+   <div id="content" class="clearfix">
+<h1>Report a storm or unusual weather event in your travel area</h1>    
+    
+    <div class="row">
+<div class="left">
+    <form action="" method="post" enctype="multipart/form-data" name="report" id="weather-event">
+        
+        <fieldset>        
+<label><span>Full Name</span> <input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z ]{5,30}" required></label>
+<label><span>e-mail</span> <input name="email" type="text" value="" placeholder="your-e-mail@weather.com"required></label> 
+<label><span>Phone</span> <input name="Phone" type="tel" value="" placeholder="3146370055" pattern="[0-9]{10,20}" required></label> 
+<label><span>Zip Code</span> <input name="zip code" type="text" value="" placeholder="95129" pattern="[0-9]{5,10}" required></label>
+    <label><span>Storm Severity 1 to 10</span> <input type="number" name="storm severity" min="1" max="10" required></label><br> 
+    <label><span>User in Danger Level</span><input type="radio" name="gender" value="Yes" checked>Yes
+  <input type="radio" name="gender" value="No"> No
+  <input type="radio" name="gender" value="Maybe"> Maybe
+     </label>
+    </fieldset>
+        
+ <fieldset> 
+     
+     <label><span>Storm Type</span><input list="storm" name="storm">
+    <datalist id="storm">
+    <option value="Flash Flood">
+    <option value="Hail">
+    <option value="Hurricane">
+    <option value="Thunderstorm">
+    <option value="Tornado">
+    </datalist> 
+        </label>
+    
+     <label><span>Storm Date</span> <input name="storm date" type="date" value="" placeholder="" required></label>            
+
+     
+     
+     
+     <label><span>Storm Region</span>
+        <select name="Region">
+    <option value="Select Region" selected disabled>Select Region</option>
+    <option value="Franklin">Franklin</option>
+    <option value="Greenville" >Greenville</option>
+    <option value="Springfield">Springfield</option>
+       </label><br>
+         
+     
+    <form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">enter additional information or comments.</textarea>
+  <br>
+</form>
+       
+     
+     
+</fieldset>
+     <input type="submit" onclick="alert('Thanks for completing this form! the information provided will allow us to provide a better service')"></button>
+        </form>
+    </div>    
+    </div>
+    </div>
+    
+  </nav>
+    
+  <main>
+    <h2>The City of Franklin</h2>
+    <figure class = "franklin">
+      <img src= "images/franklin-original.jpeg"sizes = "50vw"
+           srcset= "images/franklin-original-small.jpg 200w, 
+                   images/franklin-original-medium.jpg 500w,
+                   images/franklin-original-large.jpg 200w,
+                   "
+                   >
+    </figure>
+    <section>
+      <h3>Weather Summary</h3>    
+      <div class="highlow">
+        <p>High:72</p>  
+        <p>Low:47</p>  
+      </div>
+      <div class="current">
+        Sunny
+        <picture>
+            <img src="images/franklin3.jpg" alt="" width="400">
+        </picture>
+      </div>   
+      <div class="conditions">
+        <p>Precipitation: 10.4</p>  
+        <p>Wind Speed:3.72</p>  
+      </div>           
+    </section>
+        
+    <section class="forecast">
+      <h3>10 Day Forecast</h3>
+      <table>
+	    <thead>
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Day 6</th>
+            <th>Day 7</th>
+            <th>Day 8</th>
+            <th>Day 9</th>
+            <th>Day 10</th>
+          </tr>
+		</thead>
+        <tbody>  
+          <tr>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+		</tbody>
+      </table>
+    </section>
+      
+    <article>
+      <h3>Franklin Breaks Record</h3>	
+      <p class="town-article">
+        <img src="images/franklin.jpg"" alt="" width="400">
+        Franklin is an independent city having its beginnings in the 1830s as a railroad stop along the Blackwater River. During this era, the river was used to transport goods to and from Albemarle Sound.
+        The climate in this area is characterized by hot, humid summers and generally mild to cool winters, Franklin has a humid subtropical climate
+      </p>
+		</article>		  
+  
+  </main>
+    
+  <footer>
+    <aside>
+      wrservice@nweather.org
+    </aside>
+    <p class="footer-bar">&copy;2017 All Rights Reserved | Wind and Rain Service | <span id="currentdate">Current Date Placeholder</span></p>
+    <script>
+document.getElementById("demo").innerHTML = Date();
+</script>                                                                                                     
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+
+</body>
+</html>
