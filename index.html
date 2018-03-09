@@ -1,32 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<html lang="en-US">
- <head>
-     <meta charset="utf-8">
-     <link rel="stylesheet" href="/styles/main.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>CIT 230 Assignment Portal | Leonardo Castrillon | BYU-Idaho</title>
-     <meta name="description" content="Second assingment on CIT 230 Course">   
+  <head>
+    <meta charset="utf-8">
+
+    <title>Wind and Rain Service</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+        var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send()
+        request.onload = function() {
+
+  var towndata = request.response;
+  populateHeader(towndata);
+  showdata(towndata);
+}
+ function populateHeader(jsonObj) {
+  var myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['towns'];
+  header.appendChild(myH1);
+
+}     
+        function showdata(jsonObj) {
+  var towns = jsonObj['towns'];
       
-    <header>
-        <h1>Leonardo Castrillón Gómez</h1>
-        <img src="/images/profile-picture.jpg" width="300" height="300" alt="My Profile Picture">
-    </header>
-    <nav>
-    </nav>
-    <main>
+  for (var i = 0; i < towns.length; i++) {
+    var myArticle = document.createElement('article');
+    var myH2 = document.createElement('h2');
+    var myPara1 = document.createElement('p');
+    var myPara2 = document.createElement('p');
+    var myPara3 = document.createElement('p');
+    var myPara4 = document.createElement('p');
+    var myList = document.createElement('ul');
+
+    myH2.textContent = towns[i].name;
+    myPara1.textContent = 'Motto: ' + towns[i].motto;
+    myPara2.textContent = 'Year Founded: ' + towns[i].yearFounded;
+    myPara3.textContent = 'Current Population:' + towns [i].currentPopulation;
+    myPara4.textContent = 'Average Rainfall:' + towns[i].averageRainfall;
         
-        <h2>CIT 230 - Assignment Portal</h2>
-        <ul>
-  <li>Reading</li>
-  <li>Essay</li>
-  <li>Lesson 3: <a href="#">Assignment Label</a></li>
-</ul>
-    </main>
-    <footer>
-        <p> © 2007 Leonardo Castrillon G &star;<a href="http:www.byui.edu/online">BYU - Idaho Online Learning </a> &star;</p> 
-    </footer>
-</body>
-</html>
+    var events = towns[i].events;
+    for (var j = 0; j < events.length; j++) {
+      var listItem = document.createElement('li');
+      listItem.textContent = showdata[j];
+      myList.appendChild(listItem);
+    }
+
+    myArticle.appendChild(myH2);
+    myArticle.appendChild(myPara1);
+    myArticle.appendChild(myPara2);
+    myArticle.appendChild(myPara3);
+    myArticle.appendChild(myPara3);
+    myArticle.appendChild(myList);
+
+    section.appendChild(myArticle);
+  }
+}
+    
+    </script>
+  </body>
+</html
