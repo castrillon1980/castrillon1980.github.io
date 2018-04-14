@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>The Mountain Spoke</title>
+	<link rel="stylesheet" href="css/eventscss.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script>
+		 $(function(){
+          
+             $('#alcoveLogo').css('opacity', 9.0);
+            $('.servicesBtn').css('color', '#FFF');
+             $('button').css('border', '1px solid red');
+             $('h2').css('border', '1px solid red');
+            $('input[name$= "Val"]').css('border', '1px solid red');
+             $(".navigation > li:eq(2)").parent().parent().parent().css('opacity','9.3');
+
+
+             $('.servicesBtn').closest('div').css('background-color','rgba(255,0,0,0.2)');
+                })
+
+
+
+         
+		
+	</script>
+</head>
+
+<body>
+	<!-- Master Container Div -->
+	<div class="container">
+		<!-- Header Div containing the Logo & Navigation Links -->
+		<div class="header">
+			<div class="logo" id="alcoveLogo"></div>
+			<div class="navbar">
+				<ul class="navigation">
+					<li><a href="Mountain.html.html">Home</a></li>
+					<li><a href="adventure-t.html">Adventure Tours</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="Sales.html">Sales</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact-us.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Content Div -->
+		<div class="content">
+			<div class="headImage"></div>
+			<!-- Get a Free Quote Form -->
+			<div class="registerForm">
+				<form id="GetAQuoteForm">
+					<h2>Receive Daily alerts!</h2>
+					<br>
+					<div class="FormFieldHolder">
+						<div class="labelHolder">
+							<label>Full Name</label>
+						</div>
+						<div class="FieldHolder">
+							<input type="text" name = "nameVal">
+						</div>
+					</div>
+
+					<div class="FormFieldHolder">
+						<div class="labelHolder">
+							<label>E-Mail</label>
+						</div>
+						<div class="FieldHolder">
+							<input type="text" name= "emailVal">
+						</div>
+					</div>
+
+					<div class="FormFieldHolder">
+						<div class="labelHolder">
+							<label>Phone</label>
+						</div>
+						<div class="FieldHolder">
+							<input type="text" name= "phoneNumVal">
+						</div>
+					</div>
+
+					<div class="FormFieldHolder">
+						<div class="labelHolder"></div>
+						<div class="FieldHolder">
+							<button id="ReqAQuoteBtn" >Receive Alerts!</button>						
+						</div>
+					</div>
+				</form>
+			</div>
+			<h2 class="motto">Events</h2>
+			<!-- Content Boxes Container Div -->
+			<div class="contentBoxes">
+				<div class="boxes box1">
+					<h2>Cycle the Continental Divide</h2>
+					<hr>
+					<p>OCBC Cycle Continental Divide 2018  will fill our May race calendar. A weekend of 2 events at 2 mountain biking venue!
+
+The downhill championship will be battled on the Super D descent of Bozeman Park and 24hrs later the cross country championship at Mountain Bike Park at Bozeman, Montana.
+						<br>
+						<br>Date:
+						<br>18 May 2018, Friday (8AM – 12noon) – Downhill
+19 July 2016, Saturday (6.30AM – 1PM) – Cross Country (XCO)
+					
+					Notes :
+
+All participants in the event MUST hold a SCF National Race Licence (2a or 2b) or a UCI International Race Licence
+All participants in the event will requires to hold the requisite insurance coverage as per stated in SCF National Race Licence guidelines
+Insurance may be purchased through SCF, which cover you for all races for entire year.
+                    </p>
+				</div>
+				<div class="boxes box2">
+					<h2>What we do</h2>
+					<hr>
+					<p>Innovation is the key to success. Alcove's expertise covers a wide range of services, technologies, tools and platforms. Here are some of the things we're really good at :
+						<br>
+						<br>
+					</p>
+                    <fieldset>        
+<label><span>Full Name</span> <input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z ]{5,30}" required></label>
+<label><br><span>e-mail</span> <input name="email" type="text" value="" placeholder="your-e-mail@example.com"required></label> 
+<label><br><span>Phone</span> <input name="Phone" type="tel" value="" placeholder="3146370055" pattern="[0-9]{10,20}" required></label> 
+<label><br><span>Zip Code</span> <input name="zip code" type="text" value="" placeholder="95129" pattern="[0-9]{5,10}" required></label>
+<label><span>Date Of Birth</span> <input name="Date of Birth" type="date" value="" placeholder="" required></label>
+<label><span>Skill Level</span>
+        <select name="Skill Level">
+    <option value="Select Level" selected disabled>Select Level</option>
+    <option value="Beginner">Beginner</option>
+    <option value="Intermediate" >Intermediate</option>
+    <option value="Expert">Expert</option>
+       </label><br>
+    <br>
+     <input type="submit" onclick="alert('Your information was correctly registered and submitted')"></button>
+
+    </fieldset>
+					
+				</div>
+				<div class="boxes box3">
+					<h2>Follow Us</h2>
+                    <br>
+					<hr>
+					<a href="https://en-gb.facebook.com/login/" class="showcaseBtn"><img src="img/facebook_bar.png"width="305"height="50" alt=""></a>
+                    <br>
+                    <br>
+					<a href="https://twitter.com/?lang=en" class="showcaseBtn"><img src="img/Twitter_Logo_Hd_Png_06.png"width="305"height="50" alt=""></a>
+                    <br>
+                     <br>
+					<a href="https://plus.google.com/discover?hl=en" class="showcaseBtn"><img src="img/gmailplus.jpg"width="305"height="50" alt=""></a>
+                    <a href="Mountain.html.html" class="showcaseBtn"><img src="img/home-b.png"width="50"height="50"  alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<h5>© The Mountain Spoke Site| 2018</h5>
+		</div>
+	</div>
+</body>
+
+</html>
